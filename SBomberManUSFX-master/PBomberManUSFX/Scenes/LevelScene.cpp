@@ -88,11 +88,6 @@ LevelScene::LevelScene(GameManager* _gameManager, const unsigned int _stage, con
           }*/
 
 
-
-
-
-
-
           // prepare player
         spawnPlayer(fieldPositionX + playerStartX * scaledTileSize, fieldPositionY + playerStartY * scaledTileSize);
         // generate enemies
@@ -141,7 +136,7 @@ LevelScene::LevelScene(GameManager* _gameManager, GameVersion _gameVersion, cons
     //generateTileMap();
     // 
     //tileGraph = new TileGraph(25, 15);
-  // crearObjetosJuego("resources/level1.txt");
+   /*crearObjetosJuego("resources/level1.txt");*/
    // 
    // 
    // 
@@ -149,12 +144,12 @@ LevelScene::LevelScene(GameManager* _gameManager, GameVersion _gameVersion, cons
      void rand1();
       srand(time(NULL));
         int MAX_NUM;
-        MAX_NUM = 3;
+        MAX_NUM = 6;
         int random = rand() % MAX_NUM;
         cout << random << endl;
 
   
-        //Trabaja con 3 mapas 
+        //Trabaja con los mapas 
         switch (random)
         {
         case 0:
@@ -165,6 +160,15 @@ LevelScene::LevelScene(GameManager* _gameManager, GameVersion _gameVersion, cons
             break;
         case 2:
             crearObjetosJuego("resources/level2.txt");
+            break;
+        case 3:
+            crearObjetosJuego("resources/level3.txt");
+            break;
+        case 4:
+            crearObjetosJuego("resources/level4.txt");
+            break;
+        case 5:
+            crearObjetosJuego("resources/level5.txt");
             break;
 
         }
@@ -1097,8 +1101,7 @@ bool LevelScene::crearObjetosJuego(string _path)
                     spawnWallPacman(fieldPositionX + x * scaledTileSize, fieldPositionY + y * scaledTileSize, tile);
        				break;
     			}
-              
-            
+                         
                 x++;
     		}
     	}
