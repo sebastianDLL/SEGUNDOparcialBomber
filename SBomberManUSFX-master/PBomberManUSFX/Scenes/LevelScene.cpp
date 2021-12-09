@@ -419,6 +419,7 @@ void LevelScene::spawnBomb(GameGraphicObject* object)
                         bombPositionY + scaledTileSize - bombPositionDiffY :
                         bombPositionY - bombPositionDiffY;
     bombPositionY += fieldPositionY;
+
     // create bomb in position
     bomb =
         std::make_shared<Sprite>(gameManager->getAssetManager()->getTexture(GameTexture::Bomb), gameManager->getRenderer());
